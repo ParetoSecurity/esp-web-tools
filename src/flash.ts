@@ -1,7 +1,7 @@
 // @ts-ignore-next-line
-import { Transport } from "esptool-js/webserial.js";
+import { Transport } from "esptool-js/webserial";
 // @ts-ignore-next-line
-import { ESPLoader } from "esptool-js/esploader.js";
+import { ESPLoader } from "esptool-js/esploader";
 import {
   Build,
   FlashError,
@@ -41,7 +41,7 @@ export const flash = async (
     });
 
   const transport = new Transport(port);
-  const esploader = new ESPLoader(transport, 460800);
+  const esploader = new ESPLoader(transport, 115200);
 
   // For debugging
   (window as any).esploader = esploader;

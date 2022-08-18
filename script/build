@@ -6,9 +6,5 @@ set -e
 cd "$(dirname "$0")/.."
 
 rm -rf dist
-NODE_ENV=production npm exec -- tsc
-NODE_ENV=production npm exec -- rollup -c
-rm -rf dist/src
-cp static dist/
-cp index.html dist/
-mv dist site_
+yarn build
+mv dist _site

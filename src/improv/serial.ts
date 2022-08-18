@@ -7,7 +7,7 @@ import {
   Logger,
   PortNotReady,
   SERIAL_PACKET_HEADER,
-} from "./const.js";
+} from "./const";
 import { sleep } from "./util/sleep";
 import { hexFormatter } from "./util/hex-formatter";
 

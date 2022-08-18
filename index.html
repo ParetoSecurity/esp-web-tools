@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <title>SMS2Slack Configurator</title>
-  <meta name="description" content="Easily allow users to flash new firmware for their ESP-devices on the web." />
+  <meta name="description" content="Easily allow users to flash new firmware for SMS2Slack on the web." />
   <meta name="viewport" content="width=device-width" />
   <style>
     body {
@@ -121,10 +121,6 @@
       }
     }
   </style>
-  
-  <script module>
-    import("/dist/web/install-button.js");
-  </script>
 </head>
 
 <body>
@@ -137,14 +133,14 @@
       <li>Access logs and send terminal commands</li>
     </ul>
 
-    <esp-web-install-button manifest="static/firmware_build/manifest.json">
+    <esp-web-install-button manifest="firmware_build/manifest.json">
       <i slot="unsupported">
         The app is not available because your browser does not support Web
         Serial. Open this page in Google Chrome or Microsoft Edge instead<span class="not-supported-i hidden">
           (but not on your iOS device)</span>.
       </i>
     </esp-web-install-button>
-    
+    <script type="module" src="/src/install-button.ts"></script>
     <div class="footer">
       <div class="initiative">
         SMS2Slack is a project by

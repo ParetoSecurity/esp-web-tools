@@ -12,8 +12,8 @@ import {
   ImprovSerialErrorState,
   Logger,
   State,
-} from "./const.js";
-import { ImprovSerial, Ssid } from "./serial.js";
+} from "./const";
+import { ImprovSerial, Ssid } from "./serial";
 import { fireEvent } from "./util/fire-event";
 import { IsSelect } from "./components/is-select";
 

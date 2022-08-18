@@ -1,5 +1,5 @@
-import type { InstallButton } from "./install-button.js";
-import "./install-dialog.js";
+import type { InstallButton } from "./install-button";
+import "./install-dialog";
 
 export const connect = async (button: InstallButton) => {
   let port: SerialPort | undefined;
