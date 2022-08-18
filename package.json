@@ -7,8 +7,8 @@
   "author": "ESPHome maintainers",
   "license": "Apache-2.0",
   "scripts": {
-    "prepublishOnly": "script/build",
-    "postinstall": "patch -Ntu node_modules/esptool-js/ESPLoader.js -i patches/0001-import-pako-and-not-change-baud.patch || true"
+    "tsc": "tsc",
+    "prepublishOnly": "script/build"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.18.6",
@@ -31,8 +31,8 @@
     "@material/mwc-formfield": "^0.26.1",
     "@material/mwc-icon-button": "^0.26.1",
     "@material/mwc-textfield": "^0.26.1",
-    "esptool-js": "github:espressif/esptool-js#0c1b972a05d691c85da23fcc937d91dcf7e283eb",
-    "improv-wifi-serial-sdk": "^2.2.2",
+    "esptool-js": "github:pkendall64/esptool-js#elrs",
+    "improv-wifi-serial-sdk": "github:ParetoSecurity/sdk-serial-js",
     "lit": "^2.0.0",
     "pako": "^2.0.4",
     "tslib": "^2.3.1"

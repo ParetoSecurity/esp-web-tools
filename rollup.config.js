@@ -9,7 +9,6 @@ const config = {
     dir: "dist/web",
     format: "module",
   },
-  external: ["https://www.improv-wifi.com/sdk-js/launch-button.js"],
   preserveEntrySignatures: false,
   plugins: [
     nodeResolve(),
