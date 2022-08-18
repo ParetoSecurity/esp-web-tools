@@ -12,11 +12,6 @@
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
-  "devDependencies": {
-    "prettier": "^2.3.0",
-    "typescript": "^4.3.2",
-    "vite": "^3.0.8"
-  },
   "dependencies": {
     "@material/mwc-button": "^0.26.1",
     "@material/mwc-checkbox": "^0.26.1",
@@ -30,6 +25,9 @@
     "improv-wifi-serial-sdk": "github:ParetoSecurity/sdk-serial-js",
     "lit": "^2.0.0",
     "pako": "^2.0.4",
-    "tslib": "^2.3.1"
+    "tslib": "^2.3.1",
+    "prettier": "^2.3.0",
+    "typescript": "^4.3.2",
+    "vite": "^3.0.8"
   }
 }

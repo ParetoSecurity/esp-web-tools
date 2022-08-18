@@ -54,7 +54,6 @@ export const flash = async (
 
   try {
     await esploader.main_fn();
-    await esploader.flash_id();
   } catch (err: any) {
     console.error(err);
     fireStateEvent({
@@ -157,20 +156,6 @@ export const flash = async (
     details: { done: true },
   });
 
-  if (eraseFirst) {
-    fireStateEvent({
-      state: FlashStateType.ERASING,
-      message: "Erasing device...",
-      details: { done: false },
-    });
-    await esploader.erase_flash();
-    fireStateEvent({
-      state: FlashStateType.ERASING,
-      message: "Device erased",
-      details: { done: true },
-    });
-  }
-
   fireStateEvent({
     state: FlashStateType.WRITING,
     message: `Writing progress: 0%`,
@@ -186,6 +171,8 @@ export const flash = async (
   try {
     await esploader.write_flash({
       fileArray,
+      flash_size: 'keep',
+      erase_all: eraseFirst,
       reportProgress(fileIndex: number, written: number, total: number) {
         const uncompressedWritten =
           (written / total) * fileArray[fileIndex].data.length;

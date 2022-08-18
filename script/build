@@ -4,7 +4,7 @@
 set -e
 
 cd "$(dirname "$0")/.."
-
+rm -rf _site
 rm -rf dist
 yarn build
 mv dist _site

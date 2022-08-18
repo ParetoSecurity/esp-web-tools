@@ -15,7 +15,7 @@
     "strict": true,
     "suppressImplicitAnyIndexErrors": true,
     "skipLibCheck": true,
-    "importHelpers": true
+    "importHelpers": true,
   },
   "include": ["src/*"]
 }

@@ -877,8 +877,8 @@ export class EwtInstallDialog extends LitElement {
     ).value;
 
     this._error = "";
-    if (!slack.includes("https://")) {
-      this._error = "Enter Slack Webhook URL";
+    if (!slack.includes("https://hooks.slack.com")) {
+      alert("Enter Slack Webhook URL");
       return;
     }
 
