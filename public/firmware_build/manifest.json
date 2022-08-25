@@ -1,13 +1,13 @@
 {
   "name": "SMS2Slack",
-  "version": "2022.8.1",
+  "version": "2022.8.2",
   "builds": [
     {
       "chipFamily": "ESP32",
       "improv": true,
       "parts": [
         {
-          "path": "firmware-factory-2022.8.1.bin",
+          "path": "firmware-factory-2022.8.2.bin",
           "offset": 0
         }
       ]

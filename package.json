@@ -10,7 +10,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "script/build"
   },
   "dependencies": {
     "@material/mwc-button": "^0.26.1",
