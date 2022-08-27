@@ -41,7 +41,7 @@ export const flash = async (
     });
 
   const transport = new Transport(port);
-  const esploader = new ESPLoader(transport, 115200);
+  const esploader = new ESPLoader(transport, 921600);
 
   // For debugging
   (window as any).esploader = esploader;

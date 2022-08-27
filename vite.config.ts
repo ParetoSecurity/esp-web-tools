@@ -1,7 +1,13 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
+    optimizeDeps: {
+        include: ['esptool-js']
+    },
     build: {
+        commonjsOptions: {
+            include: [/esptool-js/, /node_modules/]
+          },
         rollupOptions: {
             output: {
                 manualChunks(id) {
