@@ -17,12 +17,11 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      NODE_ENV: production
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: yarn && npm install --dev
-      - run: yarn build
+          cache: 'npm'
+      - run: npm install --include=dev
+      - run: npm run build

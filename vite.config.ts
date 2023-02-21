@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
+    base: "https://paretosecurity.github.io/sms2slack-configure/",
     optimizeDeps: {
         include: ['esptool-js']
     },
